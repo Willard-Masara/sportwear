@@ -10,8 +10,8 @@
 .Home-Image {
   height: 40vmin;
   pointer-events: none;
-  max-width: 100%; /* Ensure the image doesn’t overflow its container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; 
+  height: auto; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,11 +38,11 @@
 }
 
 .product {
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .button {
-  margin-top: 15px; 
+  margin-top: 15px;
   padding: 10px 20px;
   border: none;
   background-color: black;
@@ -52,7 +52,7 @@
 }
 
 .button:hover {
-  background-color: red; 
+  background-color: red;
   color: white;
 }
 
@@ -67,25 +67,48 @@
 /* Media Query for Responsive Design */
 @media screen and (max-width: 600px) {
   .Home-Image {
-    height: auto;
-    width: 100%; 
-    max-width: 100%; 
+    height: auto; /* Allow height to adjust automatically */
+    width: 100%; /* Ensure image takes up full width of the container */
+    max-width: 100%; /* Prevent image from exceeding the container width, no overflows*/
   }
 
   .App-header {
     font-size: calc(8px + 2vmin); 
+    padding: 20px; 
   }
 
   .products {
-    margin: 30px; /* Reduce margins for smaller screens */
-    padding-top: 30px;
+    margin: 20px; 
+    padding-top: 20px; 
+  }
+
+  .product {
+    margin-bottom: 20px; 
   }
 
   .button {
-    padding: 8px 16px; /* Adjust button padding for smaller screens */
+    padding: 8px 16px; 
+  }
+
+  .cart-summary {
+    font-size: calc(8px + 1vmin); 
   }
 
   .Footer {
-    margin-top: 20px; /* Adjust footer margin for smaller screens */
+    margin-top: 20px; 
+    font-size: calc(8px + 1vmin); 
+  }
+
+  .product img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .product h3 {
+    font-size: calc(12px + 1vmin); 
+  }
+
+  .product p {
+    font-size: calc(10px + 0.5vmin); 
   }
 }
