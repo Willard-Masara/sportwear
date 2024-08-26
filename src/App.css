@@ -10,6 +10,8 @@
 .Home-Image {
   height: 40vmin;
   pointer-events: none;
+  max-width: 100%; /* Ensure the image doesn’t overflow its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -60,4 +62,30 @@
 
 .Footer {
   margin-top: 40px;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 600px) {
+  .Home-Image {
+    height: auto;
+    width: 100%; 
+    max-width: 100%; 
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); 
+  }
+
+  .products {
+    margin: 30px; /* Reduce margins for smaller screens */
+    padding-top: 30px;
+  }
+
+  .button {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
+  }
+
+  .Footer {
+    margin-top: 20px; /* Adjust footer margin for smaller screens */
+  }
 }
